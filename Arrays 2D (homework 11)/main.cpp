@@ -1,12 +1,12 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 void main()
 
 {
 	setlocale(LC_ALL, "RUS");
-	const int ROWS = 3; // Количество строк
-	const int COLS = 3; // Количество столбцов (элементов строки)
+	const int ROWS = 3; // РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє
+	const int COLS = 3; // РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ (СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё)
 	int arr[ROWS][COLS];
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -15,9 +15,9 @@ void main()
 			arr[i][j] = rand() % 10;
 		}
 	}
-	cout << "Выберите действие +, *, d" << endl;
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ +, *, d" << endl;
 	cout << endl;
-	cout << "Матрица А:" << endl;
+	cout << "РњР°С‚СЂРёС†Р° Рђ:" << endl;
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -32,7 +32,7 @@ void main()
 	if (key == '+')
 	{
 		cout << "\n";
-		cout << "Матрица B:" << endl;
+		cout << "РњР°С‚СЂРёС†Р° B:" << endl;
 		for (int i = 0; i < ROWS; i++)
 		{
 			for (int j = 0; j < COLS; j++)
@@ -42,7 +42,7 @@ void main()
 			cout << endl;
 		}
 		cout << "\n";
-		cout << "=" << endl; cout << "\n"; cout << "Матрица С:" << endl;
+		cout << "=" << endl; cout << "\n"; cout << "РњР°С‚СЂРёС†Р° РЎ:" << endl;
 		for (int i = 0; i < ROWS; i++)
 		{
 			for (int j = 0; j < COLS; j++)
@@ -55,7 +55,7 @@ void main()
 	if (key == '*')
 	{
 		cout << "\n";
-		cout << "Матрица B:" << endl;
+		cout << "РњР°С‚СЂРёС†Р° B:" << endl;
 		for (int i = 0; i < ROWS; i++)
 		{
 			for (int j = 0; j < COLS; j++)
@@ -65,7 +65,7 @@ void main()
 			cout << endl;
 		}
 		cout << "\n";
-		cout << "=" << endl; cout << "\n"; cout << "Матрица С:" << endl;
+		cout << "=" << endl; cout << "\n"; cout << "РњР°С‚СЂРёС†Р° РЎ:" << endl;
 		int C[ROWS][COLS]{};
 		for (int i = 0; i < ROWS; i++)
 		{
@@ -81,7 +81,7 @@ void main()
 	if (key == 'd')
 	{
 		cout << "\n";
-		cout << "Определитель (determinant) матрицы А:";
+		cout << "РћРїСЂРµРґРµР»РёС‚РµР»СЊ (determinant) РјР°С‚СЂРёС†С‹ Рђ:";
 		int D[ROWS][COLS * 2]{};
 		for (int i = 0; i < ROWS; i++)
 		{
@@ -114,9 +114,9 @@ void main()
 			sum_main_diag += product_main;
 			sum_aux_diag += product_aux;
 		}
-		cout << "Сумма произведений элементов главной диагонали: " << sum_main_diag << endl;
-		cout << "Сумма произведений элементов второстепенной диагонали: " << sum_aux_diag << endl;
-		cout << "Определитель: " << (determinant = sum_main_diag - sum_aux_diag) << endl;
+		cout << "РЎСѓРјРјР° РїСЂРѕРёР·РІРµРґРµРЅРёР№ СЌР»РµРјРµРЅС‚РѕРІ РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё: " << sum_main_diag << endl;
+		cout << "РЎСѓРјРјР° РїСЂРѕРёР·РІРµРґРµРЅРёР№ СЌР»РµРјРµРЅС‚РѕРІ РІС‚РѕСЂРѕСЃС‚РµРїРµРЅРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё: " << sum_aux_diag << endl;
+		cout << "РћРїСЂРµРґРµР»РёС‚РµР»СЊ: " << (determinant = sum_main_diag - sum_aux_diag) << endl;
 	}
 
 }
